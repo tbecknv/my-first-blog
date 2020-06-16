@@ -17,11 +17,10 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
-# Function that publishes the post.
-def publish(self):
-    self.published_date = timezone.now()
-    self.save()
-
-# Returns a string of the title of the post.
-def __str__(self):
-    return self.title
+    # Function that publishes the post.
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+    # Returns a string of the title of the post.
+    def __str__(self):
+        return self.title
